@@ -1,0 +1,41 @@
+/* 입력서식 컴포넌트 */
+
+.form-group {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-group-label {
+  /* white-space: nowrap; */
+  flex-shrink: 0;
+}
+
+.form-group-input {
+  appearance: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 2px 2px 8px;
+  height: 28px;
+  margin-left: 12px;
+  flex-grow: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* 버튼 컴포넌트 */
+.button {
+  border: 0;
+  padding: 0 12px;
+  cursor: pointer;
+  background: transparent;
+  height: 28px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.button-fill {
+  background: #000;
+  color: #fff;
+}
