@@ -1,1 +1,26 @@
-/* CSS 스타일 */
+/* css는 선언 순서가 중요함! */
+/* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
+
+@import url(./normalize.css);
+@import url(./reset.css);
+
+body {
+  background: #ffc;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.header {
+  background: pink;
+}
+.visual {
+  background: orange;
+}
+.main {
+  background: lightgreen;
+}
+.slogan {
+  background: skyblue;
+}
+.footer {
+  background: gray;
+}
