@@ -4,6 +4,14 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 기본 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+/* 앞으로 등장하는 모든 box-sizing은 border-box로! */
+/* 이걸 해주지 않으면 padding값을 변경했을 때 width 값을 계속 변경해줘야 함 */
+
+
 /* 본문 스타일 */
 body {
   background: #ffc;
@@ -14,7 +22,6 @@ body {
 .header, .visual, .main, .slogan, .footer-inner{
   /* 셀렉터 그루핑 */
   width: 940px;
-  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -33,7 +40,29 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
+  display: flow-root;
+  padding: 0 15px;
 }
+
+.group{
+  margin: 0 15px;
+  float: left;
+}
+
+.group1{
+  background-color: violet;
+  width: 250px;
+}
+
+.group2{
+  background-color: salmon;
+  width: 380px;
+}
+.group3{
+  background-color: gold;
+  width: 190px;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
