@@ -39,9 +39,16 @@ body {
 /* 메인 */
 .main {
   background: lightgreen;
-  height: 50vh;
+  min-height: 450px;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
+  /* flex-direction: row;
+  flex-wrap: nowrap; 
+  위 두 줄을 flex-flow 한 줄로 설정 가능
+  display와 함께 작성해서 초기 설정해주면 편함*/
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
 }
 
 .group1{
@@ -53,6 +60,7 @@ body {
   background-color: salmon;
   width: 380px;
 }
+
 .group3{
   background-color: gold;
   width: 190px;
