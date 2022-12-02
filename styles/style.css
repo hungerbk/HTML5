@@ -14,7 +14,7 @@
 
 /* 본문 스타일 */
 body {
-  background: #ffc;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -27,10 +27,34 @@ body {
 
 /* 헤더 */
 .header {
+  background: #fff;
   padding: 0 30px;
-  background: pink;
   height: 15vh;
+  border-radius: 0 0 15px 15px;
+  /* lt rt rb lb */
+  /* x축 으로 15px y축으로 15px 만큼 움직여서 연결하기(활 그리기) */
+  /* border-radius: 0 0 15px 15px / 0 0 50px 50px; */
+  /* 위처럼 작성하면 원이 아니라 좀더 급격하게 줄어드는 모양 */
+  /* border-radius를 box보다 크게 입력한 경우, 우선 큰 값을 그리고 사이즈에 맞춰 계속 줄여나감 -> 50px입력한 것과 같은 결과가 나옴 */
+  position: relative;
+  /* 현재 normal flow를 유지하되 움직일 수 있는 상태. 여기서는 logo position 기준이 되기 위해. */
 }
+/* 로고 */
+.logo{
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
+/* 포지션은 상위 컨테이닝 블록을 기준으로 배치됨
+하지만 아무나 기준으로 삼는 것은 아님
+position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 다양한 기준이 있음) */
+
+/* 텍스트 링크 모음 */
+.member {
+  background-color:  aqua;
+}
+
 /* 비주얼 */
 .visual {
   background: orange;
