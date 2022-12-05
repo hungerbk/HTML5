@@ -3,6 +3,9 @@
 
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./modern.css);
+/* @import url(./fontello.css); */
+
 
 /* 기본 스타일 */
 *, *::before, *::after{
@@ -63,10 +66,24 @@ body {
 } */
 
 
-.member li:nth-child(n+2)::before{
+/* .member li:nth-child(n+2)::before{
   background-color: lightblue;
   content: ":";
-}
+} */
+
+
+/* .member li::before{
+  content: "\e800";
+  font-family: "fontello";
+  font-family: "modern";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+} */
 
 
 /* 비주얼 */
