@@ -14,10 +14,16 @@
 /* 앞으로 등장하는 모든 box-sizing은 border-box로! */
 /* 이걸 해주지 않으면 padding값을 변경했을 때 width 값을 계속 변경해줘야 함 */
 
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* 본문 스타일 */
 body {
-  background: #ffc;
+  color: #212121;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -84,6 +90,10 @@ body {
   margin-right: .2em;
   text-align: center;
 } */
+
+.member a{
+  text-transform: uppercase;
+}
 
 
 /* 비주얼 */
