@@ -28,9 +28,47 @@ body {
 /* 헤더 */
 .header {
   padding: 0 30px;
-  background: pink;
+  background: #fff;
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  /* 우측 정렬 */
+}
+
+/* :before, ::before => first child */
+/* :after, ::after => last child */
+
+/* 겹침 cascading */ 
+/* 겹치지 않게 선언하는 것이 중요하다! */
+/* 우선순위 규칙에 따라 나중에 선언했어도 반영X */
+/* li(Type Selector) - 1점 */
+/* .first(Class Selector) - 10점 */
+/* #item(ID Selector) - 100점 */
+/* 점수가 같은 경우에는 나중에 선언한 것이 우선순위. 아니라면 우선순위 순서대로 */
+
+/* .member ->10, li -> 1, ::before->1 => 12점 */
+/* .member li::before {
+  content: ":";
+} */
+
+/* member-> 1, .first->10, ::before ->1 => 21점 */
+/* .member .first::before{
+  content: "";
+} */
+
+
+.member li:nth-child(n+2)::before{
+  background-color: lightblue;
+  content: ":";
+}
+
+
 /* 비주얼 */
 .visual {
   background: orange;
