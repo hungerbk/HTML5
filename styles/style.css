@@ -4,6 +4,14 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  background-color: yellow;
+  /* 노멀 플로우를 벗어나서 떠 있음 */
+  position: absolute; 
+  top: -9999em;
+}
+
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
