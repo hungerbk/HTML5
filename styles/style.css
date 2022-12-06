@@ -45,7 +45,6 @@ body {
 .header {
   background: #fff;
   padding: 0 30px;
-  height: 15vh;
   border-radius: 0 0 15px 15px;
   /* lt rt rb lb */
   /* x축 으로 15px y축으로 15px 만큼 움직여서 연결하기(활 그리기) */
