@@ -11,6 +11,12 @@
 /* 앞으로 등장하는 모든 box-sizing은 border-box로! */
 /* 이걸 해주지 않으면 padding값을 변경했을 때 width 값을 계속 변경해줘야 함 */
 
+/* root element */
+html{
+  /* 권장하는 사이즈는 아님. 수업에서는 계산하기 편하게 하려고 */
+  font-size: 10px;
+}
+
 /* 링크 스타일 */
 a {
   color: inherit;
@@ -19,6 +25,10 @@ a {
 
 /* 본문 스타일 */
 body {
+  /* em, rem 단위를 사용해보기 */
+  /* 상속 받지 않고, root로 가서 연산. 10px * 1.4 */
+  /* em은 상속받은 값을 기준으로 계산 */
+  font-size: 1.4rem;
   color: #212121;
   background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
