@@ -112,6 +112,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   padding-bottom: 80px;
 }
 .menu {
+  border-top: 2px solid #212121;
   background: #e85e2c
   linear-gradient(
     to bottom,
@@ -120,6 +121,20 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
     #e85e2c 70%,
     #ef9126 100%
   );
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+  padding-left: 230px;
+}
+
+.menu-item{
+  background-color: aqua;
+  float: left;
+}
+
+.sub-menu{
+  background-color: pink;
+  position: absolute;
+  display: none;
 }
 
 /* 비주얼 */
