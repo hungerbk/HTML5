@@ -40,7 +40,7 @@ body {
   /* em은 상속받은 값을 기준으로 계산 */
   font-size: 1.4rem;
   color: #212121;
-  background: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -108,6 +108,9 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 } */
 
 /* 메인 메뉴 */
+.navigation{
+  padding-bottom: 80px;
+}
 .menu {
   background: #e85e2c
   linear-gradient(
@@ -158,7 +161,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 /* 푸터 */
 .footer {
-  background: gray;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 .footer-inner{
   background: silver;
