@@ -58,7 +58,6 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 /* 텍스트 링크 모음 */
 .member {
-  background-color:  aqua;
   text-align: right;
   padding: 4px 0;
   text-transform: uppercase;
@@ -70,12 +69,10 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .member li{
-  /* background-color: pink; */
   display: inline-block;
 }
 
 .member a{
-  background-color: coral;
   /* a태그에 padding: 클릭할 수 있는 범위가 늘어남 */
   padding: 6px 10px;
   display: inherit;
