@@ -63,8 +63,10 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   padding: 4px 0;
   text-transform: uppercase;
   /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px만큼 이동하기 */
-  position: relative;
-  right: -10px;
+  /* position: relative;
+  right: -10px; */
+  /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px만큼 이동하기 */
+  transform: translateX(10px);
 }
 
 .member li{
