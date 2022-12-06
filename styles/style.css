@@ -61,6 +61,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   background-color:  aqua;
   text-align: right;
   padding: 4px 0;
+  text-transform: uppercase;
 }
 
 .member li{
@@ -77,6 +78,12 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .divider {
   margin-right: 4px;
+}
+
+/* 마지막 li 요소에 포함된 a 태그를 선택해 오른쪽 padding 값을 0으로 재정의하는 방법*/
+/* 다른 글자는 글자 옆도 링크 영역이었는데, 잉글리시만 그러지 않음. */
+.member li:last-child a{
+  padding-right: 0;
 }
 
 /* 비주얼 */
