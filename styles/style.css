@@ -122,13 +122,29 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
     #ef9126 100%
   );
   border-radius: 0 0 5px 5px;
-  display: flow-root;
   padding-left: 230px;
+  height: 47px;
 }
 
 .menu-item{
-  background-color: aqua;
   float: left;
+  border-left: 2px solid #fff;
+}
+
+.menu-button{
+  border: 0;
+  background: transparent;
+  /* 여백도 누를 수 있게 하려고 */
+  padding: 0 23px;
+  /* sub-menu가 글씨 속성을 상속받는 것을 막기 위해 menu-item이 아니라 버튼에만 주는 것 */
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  /* x y 블러처리(값을 지정하지 않으면 번지지 않음) 색 */
+  /* 글씨를 복사해서 위치를 옮기는 것 -> 두껍게 하려면 여러개를 만들어야 함. 위치를 다 다르게 해서*/
+  /* text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000; */
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
 
 .sub-menu{
