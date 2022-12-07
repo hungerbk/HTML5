@@ -170,7 +170,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   position: absolute;
   top: 47px;
   display: none;
-  /* padding: 4px 0; */
+  padding: 4px 0;
 }
 
 .menu-html, .menu-css, .menu-standards{
@@ -195,7 +195,8 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .sub-menu a::before{
   content: '\f192';
-  font-family: 'fontello';
+  font-family: "fontello";
+  font-style: normal;
   font-weight: normal;
   display: inline-block;
   text-decoration: inherit;
@@ -220,7 +221,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .sub-menu a {
   display: inline-block;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 /* 비주얼 */
