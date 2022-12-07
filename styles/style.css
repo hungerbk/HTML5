@@ -124,10 +124,14 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 47px;
+  position: relative;
+}
+
+.menu > li:nth-child(-n + 3) {
+  position: relative;
 }
 
 .menu-item{
-  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
@@ -164,14 +168,23 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   background-color: pink;
   position: absolute;
   top: 47px;
-  left: 0;
   display: none;
+}
+
+.menu-html, .menu-css, .menu-standards{
+  left: 0;
+}
+
+.menu-accessibility, .menu-qna, .menu-archive{
+  right:0;
 }
 
 .is-active .sub-menu{
   /* display 어떻게 보여줄 지 결정하는 것. 꼭 block일 필요가 없음. */
   /* display: flex; */
   display: block;
+  /* 공백. 줄바꿈 금지 */
+  white-space: nowrap;
 }
 
 .sub-menu li{
