@@ -230,22 +230,40 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   /* from 대신 0%*/
   0%{
     font-size: 12px;
+    /* transform: scale(0.5); */
+    color: rgba(0, 0, 0, 0.2);
+    /* padding: 0; */
+    /* top: 0;
+    left: 0; */
+    transform: translate(0,0);
   }
   /* to 대신 100%*/
   100%{
     font-size: 24px;
+    /* transform: scale(1); */
+    color: rgba(0, 0, 0, 1);
+    /*  시작 위치는 생략 가능 */
+    /* padding: 75px 0 0 400px; */
+    /* top: 75px;
+    left: 400px; */
+    transform: translate(400px,75px);
   }
 }
 
 .visual {
   background: orange;
   height: 120px;
+  position: relative;
 }
 
 .visual-text{
   background-color: coral;
   animation-name: moveEffect;
   animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-size: 24px; */
+  display: inline-block;
 }
 
 /* 메인 */
