@@ -111,7 +111,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 /* 메인 메뉴 */
 .navigation{
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .menu {
   border-top: 2px solid #212121;
@@ -167,10 +167,10 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .sub-menu{
-  background-color: pink;
   position: absolute;
   top: 47px;
   display: none;
+  /* padding: 4px 0; */
 }
 
 .menu-html, .menu-css, .menu-standards{
@@ -210,8 +210,17 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sub-menu a:hover, .sub-menu a:focus{
+  color: #f00;
+}
+
 .sub-menu a:hover::before, .sub-menu a:focus::before{
   content: '\e800';
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 10px 0;
 }
 
 /* 비주얼 */
