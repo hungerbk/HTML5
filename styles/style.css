@@ -131,6 +131,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   border-left: 2px solid #fff;
 }
 
+/* 구체성 10점 */
 .menu-button{
   border: 0;
   background: transparent;
@@ -145,6 +146,17 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   /* 글씨를 복사해서 위치를 옮기는 것 -> 두껍게 하려면 여러개를 만들어야 함. 위치를 다 다르게 해서*/
   /* text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000; */
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+/* 구체성 20점 */
+.is-active .menu-button{
+  color: #ff0;
+}
+
+.is-active .menu-button::after{
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
 }
 
 .sub-menu{
