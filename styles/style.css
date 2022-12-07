@@ -1,8 +1,9 @@
 /* css는 선언 순서가 중요함! */
 /* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
-
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+
 
 /* 숨김 콘텐츠 */
 .a11y-hidden{
@@ -190,6 +191,27 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .sub-menu li{
   display: inline-block;
+}
+
+.sub-menu a::before{
+  content: '\f192';
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu a:hover::before, .sub-menu a:focus::before{
+  content: '\e800';
 }
 
 /* 비주얼 */
