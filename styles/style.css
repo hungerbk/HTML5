@@ -225,10 +225,29 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 /* 비주얼 */
+/* moveEffect라는 이름으로 시작과 끝을 묶어주는 역할(keyframes) */
+@keyframes moveEffect {
+  /* from 대신 0%*/
+  0%{
+    font-size: 12px;
+  }
+  /* to 대신 100%*/
+  100%{
+    font-size: 24px;
+  }
+}
+
 .visual {
   background: orange;
-  height: 10vh;
+  height: 120px;
 }
+
+.visual-text{
+  background-color: coral;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
+}
+
 /* 메인 */
 .main {
   background: lightgreen;
