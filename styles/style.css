@@ -1,8 +1,8 @@
-/* css는 선언 순서가 중요함! */
-/* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
-@import url(./fonts.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+/* css는 선언 순서가 중요함! */
+/* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
 
 
 /* 숨김 콘텐츠 */
@@ -241,6 +241,8 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   100%{
     font-size: 24px;
     /* transform: scale(1); */
+    /* 아래는 검정으로 출력. 만약 글씨에 색을 지정한 경우 아래 코드를 지우면 원래 색으로 나온다. 
+    아래 코드가 있으면, 글씨에 색이 지정되어 있더라도 검정색으로 나옴*/
     color: rgba(0, 0, 0, 1);
     /*  시작 위치는 생략 가능 */
     /* padding: 75px 0 0 400px; */
@@ -262,7 +264,8 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* font-size: 24px; */
+  font-size: 24px;
+  /* color: blue; */
   display: inline-block;
 }
 
