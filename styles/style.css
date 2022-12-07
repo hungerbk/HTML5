@@ -127,6 +127,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .menu-item{
+  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
@@ -162,7 +163,19 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 .sub-menu{
   background-color: pink;
   position: absolute;
+  top: 47px;
+  left: 0;
   display: none;
+}
+
+.is-active .sub-menu{
+  /* display 어떻게 보여줄 지 결정하는 것. 꼭 block일 필요가 없음. */
+  /* display: flex; */
+  display: block;
+}
+
+.sub-menu li{
+  display: inline-block;
 }
 
 /* 비주얼 */
