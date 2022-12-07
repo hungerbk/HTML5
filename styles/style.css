@@ -69,6 +69,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 
 /* 포지션은 상위 컨테이닝 블록을 기준으로 배치됨
