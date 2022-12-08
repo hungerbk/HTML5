@@ -265,20 +265,61 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   }
 }
 
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .visual {
   height: 120px;
   position: relative;
 }
 
+.visual::before, .visual::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* animation-name: fadeEffect;
+  animation-duration: 2000ms; */
+  /* 숫자를 넣으면 숫자만큼 반복. infinite -> 무한 */
+  /* animation-iteration-count: infinite; */
+  /* alternate 순방향 -> 역방향 */
+  /* animation-direction: alternate; */
+
+  animation: fadeEffect 2000ms infinite alternate;
+}
+
+.visual::before{
+  /* background-image: url("./images/ani_flower_01.png"), url("./images/ani_flower_02.png");
+  background-repeat: no-repeat;
+  background-position: 0 -10px, 600px 0; */
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px, url("./images/ani_flower_02.png") no-repeat 600px 0;
+}
+
+.visual::after{
+  /* background-color: pink; */
+  background: url("./images/ani_flower_03.png") no-repeat 300px 0, url("./images/ani_flower_04.png") no-repeat 800px 0;
+  animation-delay: 1000ms;
+}
+
 .visual-text{
-  animation-name: moveEffect;
-  animation-duration: 2000ms;
-  animation-fill-mode: forwards;
+  /* animation-name: moveEffect;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards; */
   font-family: Georgia, 'Times New Roman', Times, serif;
+  animation: moveEffect 400ms ease-in-out forwards;
   /* font-size: 24px; */
   /* color: blue; */
   /* display: inline-block; */
-  position: absolute;
+  position: relative;
+  z-index: 1;
 }
 
 /* 메인 */
