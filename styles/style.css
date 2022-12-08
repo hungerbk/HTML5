@@ -39,10 +39,19 @@ body {
   /* em, rem 단위를 사용해보기 */
   /* 상속 받지 않고, root로 가서 연산. 10px * 1.4 */
   /* em은 상속받은 값을 기준으로 계산 */
-  font-size: 1.4rem;
   color: #212121;
-  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+  font-size: 1.4rem;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%); */
+  /* background-color: #ccc;
+  background-image: url(./images/bg_flower.png), linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: 50% 0, 0 0; */
+
+  /* 단축 표기법 */
+  background: url(./images/bg_flower.png) no-repeat 50% 0, 
+    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%) repeat 0 0;
+
 }
 
 /* 레이아웃 */
@@ -257,13 +266,11 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .visual {
-  background: orange;
   height: 120px;
   position: relative;
 }
 
 .visual-text{
-  background-color: coral;
   animation-name: moveEffect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
