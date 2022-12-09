@@ -433,14 +433,31 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 /* 유효성 검사 배너 */
 .validation-list{
-  background-color: yellow;
   margin-top: 25px;
 }
 
 .validation-list li{
-  background-color: pink;
   margin-top: 10px;
 }
+
+.validation-list a{
+  display: block;
+  /* 이미지가 앞으로 나와야하기 때문에, 그라데이션 보다 앞에 나오게! */
+  background: url(./images/validation_icon.png) no-repeat 25px 50% ,#ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 15px 8px 50px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+}
+
+/* .validation-list a::before{
+  content: url(./images/validation_icon.png);
+  vertical-align: middle;
+} */
+
+.validation-list a:hover, .validation-list a:focus{
+  color: red;
+}
+
 
 /* 슬로건 */
 .slogan {
