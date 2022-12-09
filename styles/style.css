@@ -431,12 +431,16 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   color: orangered;
 }
 
-/* .sign a::before{
-  content: "\e803";
-  font-family: "fontello";
-  color: orangered;
-  margin-right: 5px;
-} */
+/* 유효성 검사 배너 */
+.validation-list{
+  background-color: yellow;
+  margin-top: 25px;
+}
+
+.validation-list li{
+  background-color: pink;
+  margin-top: 10px;
+}
 
 /* 슬로건 */
 .slogan {
