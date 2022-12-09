@@ -6,7 +6,7 @@
 
 
 /* 숨김 콘텐츠 */
-.a11y-hidden{
+.a11y-hidden, legend{
   /* 노멀 플로우를 벗어나서 떠 있음 */
   position: absolute; 
   width: 1px;
@@ -324,10 +324,11 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group{
@@ -336,7 +337,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .group1{
-  background-color: violet;
+  /* background-color: violet; */
   width: 250px;
 }
 
@@ -348,6 +349,94 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   background-color: gold;
   width: 190px;
 }
+
+/* 로그인 */
+.login{
+  box-shadow: 5px 5px 0 0 #ccc;
+  /* gradient는 CSS2.2에는 없던 기능. 모던브라우저에서만 지원하기 때문에, 그라디언트를 지원하지 못 하는 경우를 위해 페인트칠을 해 놓는 것 */
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title{
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form{
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset{
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+
+.user-email, .user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 54px;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign a {
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before{
+  content: "\e804";
+  font-family: fontello;
+  margin-right: 8px;
+  color: orangered;
+}
+
+/* .sign a::before{
+  content: "\e803";
+  font-family: "fontello";
+  color: orangered;
+  margin-right: 5px;
+} */
 
 /* 슬로건 */
 .slogan {
