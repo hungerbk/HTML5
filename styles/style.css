@@ -481,10 +481,14 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   display: flow-root;
 }
 
-.term-list-subject{
-  color: #296897;
+.term-list-subject, .term-list-brief{
   float: right;
   width: 145px;
+}
+
+.term-list-subject{
+  color: #296897;
+  font-weight: 500;
 }
 
 .term-list-thumbnail{
@@ -496,8 +500,17 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .term-list-brief{
-  float: right;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-subject, .cross .term-list-brief{
+  float: left;
   width: 145px;
+}
+
+.cross .term-list-thumbnail{
+  float: right;
 }
 
 
