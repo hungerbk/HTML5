@@ -537,7 +537,9 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .form-group-label{
   /* 줄바꿈 금지. 단, 부모영역의 크기가 줄면 튀어나옴 */
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  /* 아래와 같은 방법으로도 줄바꿈 해결 가능 */
+  flex-shrink: 0;
   margin-right: 10px;
 }
 
@@ -547,8 +549,8 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   height: 24px;
   padding: 1px 1px 1px 5px;
   flex-grow: 1;
-  /* min-width: 0;
-  max-width: 100%; */
+  min-width: 0;
+  width: 100%;
 }
 
 .search-button{
