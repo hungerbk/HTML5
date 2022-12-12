@@ -458,6 +458,48 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   color: red;
 }
 
+/* 웹 관련 용어 */
+.term {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.term-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div{
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject{
+  color: #296897;
+  float: right;
+  width: 145px;
+}
+
+.term-list-thumbnail{
+  float: left;
+}
+
+.term-list-thumbnail img{
+  vertical-align: middle;
+}
+
+.term-list-brief{
+  float: right;
+  width: 145px;
+}
+
 
 /* 슬로건 */
 .slogan {
