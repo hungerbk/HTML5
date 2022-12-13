@@ -785,6 +785,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 .related-list li{
   height: 25px;
   display: flex;
+  /* 가운데 정렬하기 위해 준 값들 */
   flex-flow: row nowrap;
   align-items: center;
   padding: 0 5px;
