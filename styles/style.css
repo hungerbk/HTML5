@@ -1,6 +1,7 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./module.css);
 /* css는 선언 순서가 중요함! */
 /* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
 
@@ -637,7 +638,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .news-title{
-  color: #e85e2c;
+  /* color: #e85e2c; */
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -667,6 +668,8 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .news-item-date{
+  /* 타임은 인라인 속성. 마진이나 패딩을 줘도 라인하이트에 맞춰지기 때문에
+  적용되지 않는 것 처럼 보임. -> 블록으로 변경(인라인 블록도 가능. 상황에 따라 적절하게) */
   display: block;
   margin: 5px 0 10px;
 }
@@ -677,9 +680,14 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .news-item-thumbnail{
   position: absolute;
-  top: 2px;
+  top: 3px;
   left:0;
   text-align: center;
+}
+
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
 }
 
 .news-more{
@@ -688,6 +696,9 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   right: -8px;
   padding: 8px;
 }
+
+/* 신규 이벤트 및 관련 사이트 */
+
 
 /* 슬로건 */
 .slogan {
