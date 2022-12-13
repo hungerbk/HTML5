@@ -701,7 +701,12 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .event{
   border-bottom: 1px solid #aaa;
+  /* 여기에 flow-root를 추가하는 것으로 float로 여백 생긴 것 해결할 수 없음. 두 요소가 묶여 있었어야 가능한 방법 */
   position: relative;
+}
+
+.event-title{
+  display: inline-block;
 }
 
 /* 아니면 부모 영역을 좀 크게 잡고, 버튼 높이를 18px로 (아웃라인 깨지는 것 방지 2) */
@@ -714,7 +719,15 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   align-items: center;
   /* 단, 갭은 IE 지원 안 함. 마진으로 해결 */
   gap: 5px;
+  float: right;
 }
+
+/* 플로트 여백 해결 방법 1 */
+/* #eventDetail{
+  clear: both;
+  padding-top: 10px;
+} */
+
 /* IR 기법 -> Image Replacement 글자 대신 배경이 나오게 하는 것 */
 .event-button{
   width: 19px;
@@ -738,6 +751,11 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   margin: 10px 0;
 }
 
+.event-thumbnail img{
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
 .event-brief {
   line-height: 1.5;
 }
@@ -748,7 +766,38 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .related-list {
   background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
   margin-top: 10px;
+  /* 바뀌기 전에 입력해야 서서히 바뀜. 변화하려는 곳에 두면 마우스를 뗐을 때는 급격하게 바뀜
+  transition-property: background-color, border-radius ;
+  transition-duration: 2000ms, 2000ms;
+  프로퍼티를 동시가 아니라 시간차를 주고 싶을 때
+  transition-delay: 0ms, 2000ms;
+  transition-timing-function: ease-in-out;
+  transition 을 이용해서 한 줄로 쓸 수 있음 */
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms ease-in-out, padding 400ms 400ms ease-in-out;
+  padding: 0;
+}
+
+.related-list li{
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.related-list a{
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  padding: 10px 0;
 }
 
 /* 슬로건 */
