@@ -699,6 +699,57 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 /* 신규 이벤트 및 관련 사이트 */
 
+.event{
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+
+/* 아니면 부모 영역을 좀 크게 잡고, 버튼 높이를 18px로 (아웃라인 깨지는 것 방지 2) */
+.event-button-wrapper{
+  height: 20px;
+  overflow: hidden;
+  /* 버튼 아래의 갭을 없애기 위해 flex를 줌. 디쎈더 영역 */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /* 단, 갭은 IE 지원 안 함. 마진으로 해결 */
+  gap: 5px;
+}
+/* IR 기법 -> Image Replacement 글자 대신 배경이 나오게 하는 것 */
+.event-button{
+  width: 19px;
+  height: 18px;
+  border: 0;
+  /* 글자 밀어내기 */
+  padding: 20px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+/* 높이가 같은데 overflow:hidden 주면 탭했을 때 아웃라인이 깨지는 것 방지 */
+.event-button:focus{
+  outline-offset: -2px;
+}
+
+.event-button-next{
+  background-position: -36px 0;
+}
+
+.event-thumbnail, .event-brief {
+  margin: 10px 0;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related{
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  margin-top: 10px;
+}
 
 /* 슬로건 */
 .slogan {
