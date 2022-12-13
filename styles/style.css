@@ -538,7 +538,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 .form-group-label{
   /* 줄바꿈 금지. 단, 부모영역의 크기가 줄면 튀어나옴 */
   /* white-space: nowrap; */
-  /* 아래와 같은 방법으로도 줄바꿈 해결 가능 */
+  /* 아래와 같은 방법으로도 줄바꿈 해결 가능. 플렉스를 사용했기 때문에! */
   flex-shrink: 0;
   margin-right: 10px;
 }
@@ -628,42 +628,6 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 .icon-plus::before{
   color: hsla(110, 50%, 30%, 1);
 }
-
-/* .board-list li{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.tab-list button{
-  background-color: #eee;
-  color: #aaa;
-  border: 1px solid #aaa;
-  padding: 5px;
-  border-radius: 5px 5px 0 0;
-}
-
-button.is-select{
-  background-color: #fff;
-  color: orange;
-  border: 1px solid orange;
-}
-
-.board-list a{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.board-more{
-  position: absolute;
-  top: 0;
-  right:0;
-}
-
-.board-more.icon-plus::before{
-  color: green;
-} */
 
 /* 슬로건 */
 .slogan {
