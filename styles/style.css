@@ -1,18 +1,17 @@
-/* css는 선언 순서가 중요함! */
-/* 사용자 스타일을 적용하려면 normalize를 가장 맨 위에 선언해야 함 */
-
 @import url(./normalize.css);
 @import url(./reset.css);
-@import url(./modern.css);
-/* @import url(./fontello.css); */
-
+@import url(./fontello.css);
 
 /* 기본 스타일 */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-/* 앞으로 등장하는 모든 box-sizing은 border-box로! */
-/* 이걸 해주지 않으면 padding값을 변경했을 때 width 값을 계속 변경해줘야 함 */
+
+html{
+  font-size: 10px;
+}
 
 /* 링크 스타일 */
 a {
@@ -23,124 +22,127 @@ a {
 /* 본문 스타일 */
 body {
   color: #212121;
+  font-size: 1.4rem;
   background: #ccc;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 /* 레이아웃 */
-.header, .visual, .main, .slogan, .footer-inner{
-  /* 셀렉터 그루핑 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
 }
 
 /* 헤더 */
 .header {
-  padding: 0 30px;
   background: #fff;
-  height: 15vh;
+  padding: 0 30px;
   border-radius: 0 0 15px 15px;
 }
 
 .member {
   background-color: pink;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  /* 우측 정렬 */
 }
-
-/* :before, ::before => first child */
-/* :after, ::after => last child */
-
-/* 겹침 cascading */ 
-/* 겹치지 않게 선언하는 것이 중요하다! */
-/* 우선순위 규칙에 따라 나중에 선언했어도 반영X */
-/* li(Type Selector) - 1점 */
-/* .first(Class Selector) - 10점 */
-/* #item(ID Selector) - 100점 */
-/* 점수가 같은 경우에는 나중에 선언한 것이 우선순위. 아니라면 우선순위 순서대로 */
-
-/* .member ->10, li -> 1, ::before->1 => 12점 */
-/* .member li::before {
-  content: ":";
-} */
-
-/* member-> 1, .first->10, ::before ->1 => 21점 */
-/* .member .first::before{
-  content: "";
-} */
-
-
-/* .member li:nth-child(n+2)::before{
-  background-color: lightblue;
-  content: ":";
-} */
-
-
-/* .member li::before{
-  content: "\e800";
-  font-family: "fontello";
-  font-family: "modern";
-  font-style: normal;
-  font-weight: normal;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-} */
-
-.member a{
-  text-transform: uppercase;
-}
-
 
 /* 비주얼 */
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
 /* 메인 */
 .main {
-  background: lightgreen;
+  background: #fff;
   min-height: 450px;
-  display: flex;
-  flex-flow: row nowrap;
-  /* flex-direction: row;
-  flex-wrap: nowrap; 
-  위 두 줄을 flex-flow 한 줄로 설정 가능
-  display와 함께 작성해서 초기 설정해주면 편함*/
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px;
+  display: flow-root;
+  padding: 30px 15px;
 }
 
-.group1{
-  background-color: violet;
+.group {
+  float: left;
+  margin: 0 15px;
+}
+
+.group1 {
   width: 250px;
 }
 
-.group2{
-  background-color: salmon;
+.group2 {
   width: 380px;
 }
-
-.group3{
-  background-color: gold;
+.group3 {
   width: 190px;
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-effect{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+/* 우리가 일괄로 모듈 간 간격을 20px씩 주고 있었기 때문에 클래스로 만듦. 나중에 일괄 수정 용이 */
+.margin-top-default{
+  margin-top: 20px;
+}
+
+.event-button-wrapper{
+  background-color: yellow;
+  overflow: hidden;
+  padding: 4px
+}
+
+.event-button{
+  width: 19px;
+  border: 0;
+  height: 18px;
+  padding: 0 ;
+  text-indent: -9999px;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+.event-button-next {
+  background-position: 100% 0;
+}
+
+.text-xl{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.accent-color{
+  color: orangered;
+}
+
+.event-thumbnail, .event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img{
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+/* 인기 사이트 */
+.favorite{
+
 }
 
 /* 슬로건 */
 .slogan {
   background: skyblue;
-  height: 10vh;
+  clear: both;
 }
 /* 푸터 */
 .footer {
   background: gray;
 }
-.footer-inner{
+.footer-inner {
   background: silver;
-  height: 15vh;
 }
