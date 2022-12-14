@@ -805,26 +805,65 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 
 .favorite{
   position: relative;
+  /* counter-reset: number; */
 }
 
 .favorite-list{
-  background-color: yellow;
+  /* background-color: yellow; */
   list-style-type: none;
+  /* counter-reset: number 10; */
 }
 
 .favorite-list li{
   margin-top: 10px;
+  /* number는 우리가 지정한 이름임! */
+  counter-increment: number;
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+}
+
+.favorite-list a{
+  background-color: aqua;
+  /* flex-grow: 1; */
 }
 
 .favorite-list li::before{
-  content: "1";
+  content: counter(number);
   background-color: #aaa;
   color: #fff;
-  padding: 1px 6px;
+  /* padding: 1px 6px; */
   font-size: 1.2rem;
   margin-right: 5px;
   border-radius: 3px;
+  /* 숫자 같은 사이즈로 나오게 함 이 코드 없으면 1은 박스 크기가 다름 */
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
 }
+
+.up, .stop, .down{
+  display: inline-block;
+  width: 20px;
+  height: 11px;
+  margin-left: auto;
+  /* 100% 0 오른쪽 정렬*/
+  background: lime url(./images/rank.png) no-repeat 100% 0;
+  /* position: absolute;
+  right: 0; */
+}
+
+.stop{
+  background-position: 100% 50%;
+}
+
+.down{
+  background-position: 10%0 100%;
+}
+
 
 .favorite-more{
   position: absolute;
