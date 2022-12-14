@@ -93,24 +93,32 @@ body {
 }
 
 .event{
-  display: flex;
+  /* display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; */
   border-bottom: 1px solid #aaa;
+  display: flow-root;
 }
 
 .event-button-wrapper{
   /* background-color: yellow; */
   /* overflow: hidden; */
   /* padding: 4px */
-  display: flex;
+  /* display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  gap: 5px;
+  gap: 5px; */
+  /* background: pink; */
+  float: right;
+}
+
+.event-title{
+  float: left;
 }
 
 .event-button{
+  /* background-color: yellow; */
   width: 19px;
   border: 0;
   height: 18px;
