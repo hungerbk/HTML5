@@ -919,6 +919,42 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 .footer-inner{
-  background: silver;
-  height: 15vh;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer-logo{
+  width: 150px;
+  /* text-align: center; */
+  padding: 20px 0 0 35px;
+}
+
+.footer-inner-wrapper {
+  /* flex grow shrink basis도 한줄로 표현할 수 있음 */
+  /* flex: 0 1 auto < 기본값 */
+  flex: 1 1 auto;
+}
+
+.guide-list{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #7b837b;
+  color: #fff;
+  border-radius: 30px;
+  padding: 4px 45px;
+  text-transform: uppercase;
+}
+
+.guide-list a{
+  display: block;
+  padding: 6px 10px;
+}
+
+.address, .copyright{
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 10px;
 }
