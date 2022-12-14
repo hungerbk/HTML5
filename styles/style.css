@@ -818,7 +818,6 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   margin-top: 10px;
   /* number는 우리가 지정한 이름임! */
   counter-increment: number;
-  background-color: pink;
   position: relative;
 }
 
@@ -848,7 +847,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
   height: 11px;
   margin-left: auto;
   /* 100% 0 오른쪽 정렬*/
-  background: lime url(./images/rank.png) no-repeat 100% 0;
+  background: url(./images/rank.png) no-repeat 100% 0;
   position: absolute;
   /* 50% 내리고, 박스 크기의 절반만큼 끌어 올림 */
   top: 50%;
@@ -863,7 +862,7 @@ position: static이 아닌 경우만 기준으로 삼음(경우의 수 하나.. 
 }
 
 .down{
-  background-position: 10%0 100%;
+  background-position: 100% 100%;
 }
 
 
