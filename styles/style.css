@@ -98,11 +98,19 @@ body {
   justify-content: space-between;
   align-items: flex-start; */
   border-bottom: 1px solid #aaa;
-  display: flow-root;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.event-title{
+  width: 50%;
 }
 
 .event-button-wrapper{
-  /* background-color: yellow; */
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
   /* overflow: hidden; */
   /* padding: 4px */
   /* display: flex;
@@ -110,15 +118,9 @@ body {
   align-items: flex-start;
   gap: 5px; */
   /* background: pink; */
-  float: right;
-}
-
-.event-title{
-  float: left;
 }
 
 .event-button{
-  /* background-color: yellow; */
   width: 19px;
   border: 0;
   height: 18px;
@@ -142,6 +144,7 @@ body {
 
 .event-thumbnail, .event-brief {
   margin: 10px 0;
+  width: 100%;
 }
 
 .event-thumbnail img{
